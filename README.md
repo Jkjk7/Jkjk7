@@ -2,7 +2,7 @@
 
 ## 你看你冯呢 / You look ur nom?
 
-## 🐱🐤 猫猫鸡
+## 🐱🐤 猫猫鸡 / Kittykitty Chick 
 
 <p align="center">
   <img src="./assets/mao-mao-ji.png" alt="猫猫鸡" width="360" />
