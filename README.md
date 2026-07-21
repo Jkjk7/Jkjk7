@@ -1,4 +1,4 @@
-# Hi, I'm Jkjk7 👋
+# Hi, I'm JkSeven 👋
 
 ## 你看你冯呢 / You look ur nom?
 
