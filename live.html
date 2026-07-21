@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>猫猫鸡存活时间</title>
+  <style>
+    :root {
+      --bg0: #fff7ed;
+      --bg1: #ffedd5;
+      --ink: #9a3412;
+      --muted: #c2410c;
+      --accent: #ea580c;
+      --card: #ffffff;
+      --stroke: #fdba74;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 500px at 15% 10%, #ffd7a8 0%, transparent 55%),
+        radial-gradient(700px 420px at 90% 85%, #fed7aa 0%, transparent 50%),
+        linear-gradient(160deg, var(--bg0), var(--bg1));
+    }
+
+    .panel {
+      width: min(560px, calc(100vw - 32px));
+      padding: 28px 28px 24px;
+      border: 2px solid var(--stroke);
+      border-radius: 24px;
+      background: color-mix(in srgb, white 70%, transparent);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 18px 40px rgba(154, 52, 18, 0.08);
+      text-align: center;
+    }
+
+    .portrait {
+      width: min(280px, 70vw);
+      height: auto;
+      border-radius: 20px;
+      display: block;
+      margin: 0 auto 18px;
+      border: 2px solid var(--stroke);
+      background: white;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+    }
+
+    .born {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .cell {
+      background: var(--card);
+      border: 1.5px solid var(--stroke);
+      border-radius: 14px;
+      padding: 12px 6px 10px;
+    }
+
+    .cell strong {
+      display: block;
+      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+      font-size: clamp(1.4rem, 5vw, 1.9rem);
+      color: var(--accent);
+      line-height: 1.1;
+    }
+
+    .cell span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .hint {
+      margin: 16px 0 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <img class="portrait" src="./assets/mao-mao-ji.png" alt="猫猫鸡" />
+    <h1>🐱🐤 猫猫鸡已存活</h1>
+    <p class="born">出生于 2026-07-20 18:30:00（北京时间）</p>
+    <div class="grid" aria-live="polite">
+      <div class="cell"><strong id="days">0</strong><span>天</span></div>
+      <div class="cell"><strong id="hours">00</strong><span>时</span></div>
+      <div class="cell"><strong id="minutes">00</strong><span>分</span></div>
+      <div class="cell"><strong id="seconds">00</strong><span>秒</span></div>
+    </div>
+    <p class="hint">本页每秒刷新 · Profile README 中的徽章由 Action 约每 5 分钟更新</p>
+  </main>
+  <script>
+    const BIRTH = Date.parse("2026-07-20T18:30:00+08:00");
+
+    function pad(n) {
+      return String(n).padStart(2, "0");
+    }
+
+    function tick() {
+      const totalSec = Math.max(0, Math.floor((Date.now() - BIRTH) / 1000));
+      const days = Math.floor(totalSec / 86400);
+      const hours = Math.floor((totalSec % 86400) / 3600);
+      const minutes = Math.floor((totalSec % 3600) / 60);
+      const seconds = totalSec % 60;
+      document.getElementById("days").textContent = String(days);
+      document.getElementById("hours").textContent = pad(hours);
+      document.getElementById("minutes").textContent = pad(minutes);
+      document.getElementById("seconds").textContent = pad(seconds);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
