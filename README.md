@@ -1,5 +1,7 @@
 # Hi, I'm Jkjk7 👋
 
+## 你看你冯呢 / You look ur nom?
+
 ## 🐱🐤 猫猫鸡
 
 <p align="center">
@@ -21,5 +23,5 @@
 ---
 
 - Profile 仓库：[`Jkjk7/Jkjk7`](https://github.com/Jkjk7/Jkjk7)
-- README 上的存活时间徽章由 GitHub Action **每 5 分钟自动刷新**
+- README 上的存活时间徽章由 GitHub Action **约每 5 分钟自动刷新**
 - 需要秒级跳动时，打开 [live.html](./live.html)（建议在仓库 Settings → Pages 里开启 GitHub Pages）
