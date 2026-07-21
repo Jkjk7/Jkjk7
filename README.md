@@ -20,8 +20,3 @@
   <a href="./live.html">⏱ 打开秒级实时计数器</a>
 </p>
 
----
-
-- Profile 仓库：[`Jkjk7/Jkjk7`](https://github.com/Jkjk7/Jkjk7)
-- README 上的存活时间徽章由 GitHub Action **约每 5 分钟自动刷新**
-- 需要秒级跳动时，打开 [live.html](./live.html)（建议在仓库 Settings → Pages 里开启 GitHub Pages）
