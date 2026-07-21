@@ -1,4 +1,4 @@
-## 你看你冯呢 / You look ur Feng?
+## 你看你冯呢 / You look ur nom?
 
 <!--
 **Jkjk7/Jkjk7** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
