@@ -12,11 +12,3 @@
   <strong>出生时间：</strong>2026 年 7 月 20 日 18:30:00（北京时间）
 </p>
 
-<p align="center">
-  <img src="./assets/alive.svg" alt="猫猫鸡存活时间" />
-</p>
-
-<p align="center">
-  <a href="./live.html">⏱ 打开秒级实时计数器</a>
-</p>
-
